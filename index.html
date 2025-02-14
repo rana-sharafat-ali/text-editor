@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Text Editor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/256/12020/12020395.png?ga=GA1.1.1514064820.1739556161&semt=ais_hybrid" type="image/x-icon">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1 {
+        text-align: center;
+        text-decoration: underline;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    .output {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: #f4f4f4;
+      padding: 10px;
+      min-height: 100px;
+      max-height: 100px;
+      overflow: auto;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text Editor</h1>
+  <h2>Enter your text:</h2>
+  <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+  <h2>Transformed Text:</h2>
+  <div class="output" id="outputText"></div>
+  <button class="btn btn-success m-2" id="fastActionBtn">Fast Action</button>
+  <button class="btn btn-outline-danger"  id="resetBtn">Reset</button>
+  <div class="buttons">
+    <div class="btn-group" role="group" >
+    <button class="btn btn-outline-info" id="upperCaseBtn">UPPER CASE</button>
+    <button class="btn btn-outline-info" id="lowerCaseBtn">lower case</button>
+    <button class="btn btn-outline-info" id="properCaseBtn">Proper Case</button>
+    </div>
+    <div class="btn-group" role="group">
+    <button class="btn btn-outline-primary" id="removeMultipleSpacesBtn">Remove Multiple Spaces</button>
+    <button class="btn btn-outline-primary" id="removeAllSpacesBtn">Remove All Spaces</button>
+    </div>
+    <button class="btn btn-outline-dark" id="addHashtagBtn">Add Hashtags</button>
+    <button class="btn btn-outline-success" id="copyBtn">Copy to Clipboard</button>
+  </div>
+
+  <p id="copyAlert" style="color: green;"></p>
+  <script src="script.js"></script>
+</body>
+</html>
